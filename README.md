@@ -9,6 +9,8 @@ Used Technologies
 - Sql Server
 - Knockout.js
 
+Sample Gif for showing how the application works:
 ![work gif](https://github.com/arslanaybars/BBS/blob/master/BBS/solution%20items/BBS.gif)
 
+Working architecture and dependencies:
 ![arch](https://github.com/arslanaybars/BBS/blob/master/BBS/solution%20items/architecture.jpg)
