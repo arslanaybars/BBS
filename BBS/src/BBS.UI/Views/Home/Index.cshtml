@@ -1,0 +1,83 @@
+﻿<div class="col-md-4">
+    <h2>User Form</h2>
+
+    <form data-bind="submit: saveUser" class="form-horizontal">
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="text" class="form-control" placeholder="Name" data-bind="value: currentUser().name" />
+            </div>
+        </div>
+
+        <!--Gender-->
+        @*<div class="form-group">
+            <div class="col-md-10" data-bind="foreach: genders">
+                <input type="radio" name="genderGroup" data-bind="click: $root.radioGender" style="margin: 5px"/><span data-bind="text: name"></span>
+            </div>
+        </div>*@
+        
+        <div class="form-group">
+            <div class="col-md-10">
+                <input name="Test" type="radio" value="1" data-bind="checked: $root.genderChecked"  style="margin: 5px" /> <span>Unknown</span>
+                <input name="Test" type="radio" value="2" data-bind="checked: $root.genderChecked"  style="margin: 5px" /><span>Male</span>
+                <input name="Test" type="radio" value="3" data-bind="checked: $root.genderChecked"  style="margin: 5px" /><span>Female</span>
+            </div>
+        </div>
+
+        <!--Role-->
+        <div class="form-group">
+            <div class="col-md-10">
+                <select class="form-control" data-bind="options: $root.roles, optionsText: 'name', optionsValue: 'id',value: currentUser().roleId, optionsCaption: 'Choose Component'"></select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @*<button data-bind="disable:active" class="btn btn-primary" type="submit">Send</button>*@
+                <button type="submit" class="btn">Save User</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="col-md-8">
+    <h2>List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Role</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: users">
+            <tr>
+                <td data-bind="text: id"></td>
+                <td data-bind="text: name"></td>
+                <td data-bind="text: gender"></td>
+                <td data-bind="text: role"></td>
+                <td>
+                    <button class="btn btn-default" data-bind="click: $root.modifyUser">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" data-bind="click: $root.delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+</script>
+
+@section scripts {
+    <script src="~/Scripts/knockout-3.4.2.js"></script>
+    <script src="~/Scripts/knockout-3.4.2.debug.js"></script>
+    <script src="~/Content/js/models.js"></script>
+    <script src="~/Content/js/site.js"></script> <!--app view model-->
+}
