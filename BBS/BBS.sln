@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBS.Services", "src\BBS.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "src\TestConsole\TestConsole.csproj", "{54EBA52A-58E4-473E-966C-CF187C34379E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{F8611909-F3ED-401D-BF09-80F44C47358B}"
+	ProjectSection(SolutionItems) = preProject
+		solution items\architecture.jpg = solution items\architecture.jpg
+		solution items\BBS.gif = solution items\BBS.gif
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
